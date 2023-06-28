@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class FactorialController {
 
-
+//method for calculating factorial of entered number
 
    @RequestMapping("/api/controller/factorial")
     public int factorial(@RequestParam int number){
