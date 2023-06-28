@@ -23,4 +23,29 @@ class FactorialControllerTest {
         assertEquals(1,result);
     }
 
+    @Test
+    void runningTotalWithoutUsage() {
+        FactorialController controller = new FactorialController();
+
+        int result = controller.total();
+        assertEquals(0,result);
+    }
+
+    @Test
+    void runningTotalOneUse() {
+        FactorialController controller = new FactorialController();
+        controller.factorial(5);
+        int result = controller.total();
+        assertEquals(120,result);
+    }
+    @Test
+    void runningTotalTwoUses() {
+        FactorialController controller = new FactorialController();
+        controller.factorial(5);
+        controller.factorial(5);
+        int result = controller.total();
+        assertEquals(240,result);
+    }
+
+
 }
